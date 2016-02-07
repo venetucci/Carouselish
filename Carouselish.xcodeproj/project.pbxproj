@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B2CC9ED1C66BC3500103276 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2CC9EC1C66BC3500103276 /* AppDelegate.swift */; };
+		3B2CC9EF1C66BC3500103276 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2CC9EE1C66BC3500103276 /* ViewController.swift */; };
+		3B2CC9F21C66BC3500103276 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B2CC9F01C66BC3500103276 /* Main.storyboard */; };
+		3B2CC9F41C66BC3500103276 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B2CC9F31C66BC3500103276 /* Assets.xcassets */; };
+		3B2CC9F71C66BC3500103276 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B2CC9F51C66BC3500103276 /* LaunchScreen.storyboard */; };
+		3B2CCA021C66BC3500103276 /* CarouselishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2CCA011C66BC3500103276 /* CarouselishTests.swift */; };
+		3B2CCA0D1C66BDDB00103276 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2CCA0C1C66BDDB00103276 /* IntroViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3B2CCA0F1C66C22100103276 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2CCA0E1C66C22100103276 /* Common.swift */; settings = {ASSET_TAGS = (); }; };
+		3B2CCA111C66D19300103276 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2CCA101C66D19300103276 /* SignInViewController.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B2CC9FE1C66BC3500103276 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B2CC9E11C66BC3500103276 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B2CC9E81C66BC3500103276;
+			remoteInfo = Carouselish;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3B2CC9E91C66BC3500103276 /* Carouselish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carouselish.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B2CC9EC1C66BC3500103276 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3B2CC9EE1C66BC3500103276 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3B2CC9F11C66BC3500103276 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3B2CC9F31C66BC3500103276 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B2CC9F61C66BC3500103276 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3B2CC9F81C66BC3500103276 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B2CC9FD1C66BC3500103276 /* CarouselishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarouselishTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B2CCA011C66BC3500103276 /* CarouselishTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselishTests.swift; sourceTree = "<group>"; };
+		3B2CCA031C66BC3500103276 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B2CCA0C1C66BDDB00103276 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		3B2CCA0E1C66C22100103276 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		3B2CCA101C66D19300103276 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B2CC9E61C66BC3500103276 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B2CC9FA1C66BC3500103276 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B2CC9E01C66BC3500103276 = {
+			isa = PBXGroup;
+			children = (
+				3B2CC9EB1C66BC3500103276 /* Carouselish */,
+				3B2CCA001C66BC3500103276 /* CarouselishTests */,
+				3B2CC9EA1C66BC3500103276 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3B2CC9EA1C66BC3500103276 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B2CC9E91C66BC3500103276 /* Carouselish.app */,
+				3B2CC9FD1C66BC3500103276 /* CarouselishTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B2CC9EB1C66BC3500103276 /* Carouselish */ = {
+			isa = PBXGroup;
+			children = (
+				3B2CC9EC1C66BC3500103276 /* AppDelegate.swift */,
+				3B2CC9EE1C66BC3500103276 /* ViewController.swift */,
+				3B2CC9F01C66BC3500103276 /* Main.storyboard */,
+				3B2CCA101C66D19300103276 /* SignInViewController.swift */,
+				3B2CCA0C1C66BDDB00103276 /* IntroViewController.swift */,
+				3B2CCA0E1C66C22100103276 /* Common.swift */,
+				3B2CC9F31C66BC3500103276 /* Assets.xcassets */,
+				3B2CC9F51C66BC3500103276 /* LaunchScreen.storyboard */,
+				3B2CC9F81C66BC3500103276 /* Info.plist */,
+			);
+			path = Carouselish;
+			sourceTree = "<group>";
+		};
+		3B2CCA001C66BC3500103276 /* CarouselishTests */ = {
+			isa = PBXGroup;
+			children = (
+				3B2CCA011C66BC3500103276 /* CarouselishTests.swift */,
+				3B2CCA031C66BC3500103276 /* Info.plist */,
+			);
+			path = CarouselishTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B2CC9E81C66BC3500103276 /* Carouselish */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B2CCA061C66BC3500103276 /* Build configuration list for PBXNativeTarget "Carouselish" */;
+			buildPhases = (
+				3B2CC9E51C66BC3500103276 /* Sources */,
+				3B2CC9E61C66BC3500103276 /* Frameworks */,
+				3B2CC9E71C66BC3500103276 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Carouselish;
+			productName = Carouselish;
+			productReference = 3B2CC9E91C66BC3500103276 /* Carouselish.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3B2CC9FC1C66BC3500103276 /* CarouselishTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B2CCA091C66BC3500103276 /* Build configuration list for PBXNativeTarget "CarouselishTests" */;
+			buildPhases = (
+				3B2CC9F91C66BC3500103276 /* Sources */,
+				3B2CC9FA1C66BC3500103276 /* Frameworks */,
+				3B2CC9FB1C66BC3500103276 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B2CC9FF1C66BC3500103276 /* PBXTargetDependency */,
+			);
+			name = CarouselishTests;
+			productName = CarouselishTests;
+			productReference = 3B2CC9FD1C66BC3500103276 /* CarouselishTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B2CC9E11C66BC3500103276 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Michelle Venetucci Harvey";
+				TargetAttributes = {
+					3B2CC9E81C66BC3500103276 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					3B2CC9FC1C66BC3500103276 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 3B2CC9E81C66BC3500103276;
+					};
+				};
+			};
+			buildConfigurationList = 3B2CC9E41C66BC3500103276 /* Build configuration list for PBXProject "Carouselish" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3B2CC9E01C66BC3500103276;
+			productRefGroup = 3B2CC9EA1C66BC3500103276 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B2CC9E81C66BC3500103276 /* Carouselish */,
+				3B2CC9FC1C66BC3500103276 /* CarouselishTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B2CC9E71C66BC3500103276 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B2CC9F71C66BC3500103276 /* LaunchScreen.storyboard in Resources */,
+				3B2CC9F41C66BC3500103276 /* Assets.xcassets in Resources */,
+				3B2CC9F21C66BC3500103276 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B2CC9FB1C66BC3500103276 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B2CC9E51C66BC3500103276 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B2CCA0F1C66C22100103276 /* Common.swift in Sources */,
+				3B2CCA0D1C66BDDB00103276 /* IntroViewController.swift in Sources */,
+				3B2CC9EF1C66BC3500103276 /* ViewController.swift in Sources */,
+				3B2CCA111C66D19300103276 /* SignInViewController.swift in Sources */,
+				3B2CC9ED1C66BC3500103276 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B2CC9F91C66BC3500103276 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B2CCA021C66BC3500103276 /* CarouselishTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B2CC9FF1C66BC3500103276 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B2CC9E81C66BC3500103276 /* Carouselish */;
+			targetProxy = 3B2CC9FE1C66BC3500103276 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3B2CC9F01C66BC3500103276 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B2CC9F11C66BC3500103276 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3B2CC9F51C66BC3500103276 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B2CC9F61C66BC3500103276 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B2CCA041C66BC3500103276 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B2CCA051C66BC3500103276 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B2CCA071C66BC3500103276 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Carouselish/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = venetescher.Carouselish;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3B2CCA081C66BC3500103276 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Carouselish/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = venetescher.Carouselish;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3B2CCA0A1C66BC3500103276 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CarouselishTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = venetescher.CarouselishTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Carouselish.app/Carouselish";
+			};
+			name = Debug;
+		};
+		3B2CCA0B1C66BC3500103276 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CarouselishTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = venetescher.CarouselishTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Carouselish.app/Carouselish";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B2CC9E41C66BC3500103276 /* Build configuration list for PBXProject "Carouselish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B2CCA041C66BC3500103276 /* Debug */,
+				3B2CCA051C66BC3500103276 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B2CCA061C66BC3500103276 /* Build configuration list for PBXNativeTarget "Carouselish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B2CCA071C66BC3500103276 /* Debug */,
+				3B2CCA081C66BC3500103276 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3B2CCA091C66BC3500103276 /* Build configuration list for PBXNativeTarget "CarouselishTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B2CCA0A1C66BC3500103276 /* Debug */,
+				3B2CCA0B1C66BC3500103276 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B2CC9E11C66BC3500103276 /* Project object */;
+}
