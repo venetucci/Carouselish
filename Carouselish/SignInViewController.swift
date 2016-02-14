@@ -16,6 +16,7 @@ class SignInViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var loginNavBar: UIImageView!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var fieldInitialY: CGFloat!
     var fieldOffset: CGFloat!
@@ -113,30 +114,30 @@ class SignInViewController: UIViewController, UIScrollViewDelegate {
         let signInAlertController = UIAlertController(title: "Signing In", message: nil, preferredStyle: .Alert)
         
             if emailField.text == "m@lyft.com" && passwordField.text == "123" {
-               presentViewController(signInAlertController, animated: true) {
-               signInAlertController.dismissViewControllerAnimated(true, completion: { () -> Void in
-                   self.performSegueWithIdentifier("signInSegue", sender: nil)
-               })
-           }
+               self.activityIndicator.startAnimating()
+                delay(2, closure: { () -> () in
+                   self.activityIndicator.stopAnimating()
+                   self.presentViewController(signInAlertController, animated: true) {
+                       signInAlertController.dismissViewControllerAnimated(true, completion: { () -> Void in
+                           self.performSegueWithIdentifier("signInSegue", sender: nil)
+                       })
+                   }
+                })
 
-        } else if emailField.text!.isEmpty || passwordField.text!.isEmpty {
-            let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
+            } else if emailField.text!.isEmpty || passwordField.text!.isEmpty {
+                let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in }
+                emailAlertController.addAction(cancelAction)
+                presentViewController(emailAlertController, animated: true) {
+                    // optional code for what happens after the alert controller has finished presenting
+                }
+            } else {
+                let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in }
+                self.activityIndicator.startAnimating()
+                delay(2, closure: { () -> () in
+                    alertController.addAction(cancelAction)
+                    self.presentViewController(alertController, animated: true) { }
+                    self.activityIndicator.stopAnimating()
+                })
             }
-            emailAlertController.addAction(cancelAction)
-            presentViewController(emailAlertController, animated: true) {
-                // optional code for what happens after the alert controller has finished presenting
-            }
-        } else {
-            let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
-            }
-            alertController.addAction(cancelAction)
-            presentViewController(alertController, animated: true) {
-                // optional code for what happens after the alert controller has finished presenting
-            }
-
         }
-    
     }
-
-    
-}

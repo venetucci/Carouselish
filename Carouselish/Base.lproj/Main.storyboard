@@ -131,8 +131,8 @@
                                                     <action selector="didPressSignIn:" destination="pb2-1s-tBN" eventType="touchUpInside" id="pMh-Ml-vfi"/>
                                                 </connections>
                                             </button>
-                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="73r-NB-bNa">
-                                                <rect key="frame" x="150" y="28" width="20" height="20"/>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="73r-NB-bNa">
+                                                <rect key="frame" x="259" y="28" width="20" height="20"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </activityIndicatorView>
                                         </subviews>
@@ -153,6 +153,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="JuT-eS-vCb"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="73r-NB-bNa" id="3Vn-XY-q62"/>
                         <outlet property="buttonParentView" destination="DXV-uI-xhP" id="vNq-ob-i5o"/>
                         <outlet property="emailField" destination="tCF-xT-0RJ" id="uuk-0i-i9w"/>
                         <outlet property="fieldParentView" destination="w46-ZI-yIv" id="xon-BG-WK8"/>
