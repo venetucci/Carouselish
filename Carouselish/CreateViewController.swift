@@ -71,5 +71,9 @@ class CreateViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func didPressCheckBox(sender: AnyObject) {
         checkBoxButton.selected = !checkBoxButton.selected
     }
+    
+    @IBAction func backButtonDidPress(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 
 }

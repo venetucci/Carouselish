@@ -69,4 +69,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
         }
     }
 
+    @IBAction func spinButtonDidPress(sender: AnyObject) {
+        performSegueWithIdentifier("spinSegue", sender: nil)
+    }
 }

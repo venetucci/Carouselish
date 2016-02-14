@@ -51,6 +51,13 @@
                                             <segue destination="pb2-1s-tBN" kind="push" animates="NO" id="VNf-Mj-nP7"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="m2y-OA-38G" userLabel="CreateButton">
+                                        <rect key="frame" x="19" y="1005" width="281" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <segue destination="Wkk-LL-iVt" kind="modal" id="d1q-bs-poM"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -215,6 +222,13 @@
                                     <action selector="pageControlDidPage:" destination="EaC-WK-ux3" eventType="valueChanged" id="Z1C-H0-eO9"/>
                                 </connections>
                             </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DG0-lm-MlC">
+                                <rect key="frame" x="0.0" y="503" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="spinButtonDidPress:" destination="EaC-WK-ux3" eventType="touchUpInside" id="gPb-Jx-rlp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -224,6 +238,7 @@
                         <outlet property="pageControl" destination="GzX-Kn-9FQ" id="jpo-BN-VBM"/>
                         <outlet property="scrollView" destination="iOW-4d-EcA" id="AdD-tF-Qlc"/>
                         <outlet property="spinButton" destination="DzD-uX-B7j" id="xOS-tN-GEd"/>
+                        <segue destination="8gc-1D-fJc" kind="modal" identifier="spinSegue" id="Sdb-oF-wGM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdX-5z-ZVv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -459,6 +474,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iCi-sD-hMp">
+                                <rect key="frame" x="0.0" y="20" width="47" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="backButtonDidPress:" destination="Wkk-LL-iVt" eventType="touchUpInside" id="hRY-xO-vUo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -593,6 +615,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Hp1-r0-9vH"/>
-        <segue reference="bEW-qg-P3d"/>
+        <segue reference="ArT-j0-s6v"/>
     </inferredMetricsTieBreakers>
 </document>
