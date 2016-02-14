@@ -14,6 +14,8 @@ class SignInViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var buttonParentView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var loginNavBar: UIImageView!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
     
     var fieldInitialY: CGFloat!
     var fieldOffset: CGFloat!
@@ -105,6 +107,34 @@ class SignInViewController: UIViewController, UIScrollViewDelegate {
             view.endEditing(true)
         }
     }
+    
+    @IBAction func didPressSignIn(sender: AnyObject) {
+        
+        let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .Alert)
+        
+        if emailField.text == "m@lyft.com" && passwordField.text == "123" {
+            
+            
+            // Code that runs if both email and password match the text we are looking for in each case
+        } else {
+            let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
+                // handle cancel response here. Doing nothing will dismiss the view.
+            }
+            alertController.addAction(cancelAction)
+            
+            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+                // handle response here.
+            }
+            alertController.addAction(OKAction)
+        }
+        
+        presentViewController(alertController, animated: true) {
+            // optional code for what happens after the alert controller has finished presenting
+        }
+    }
+    
+    
+
     
     
 }

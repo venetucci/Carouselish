@@ -16,6 +16,9 @@
 		3B2CCA0D1C66BDDB00103276 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2CCA0C1C66BDDB00103276 /* IntroViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3B2CCA0F1C66C22100103276 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2CCA0E1C66C22100103276 /* Common.swift */; settings = {ASSET_TAGS = (); }; };
 		3B2CCA111C66D19300103276 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2CCA101C66D19300103276 /* SignInViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3B8072411C702A2B008BA889 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8072401C702A2B008BA889 /* TutorialViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3B8072431C70331E008BA889 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8072421C70331E008BA889 /* FeedViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3B8072451C703491008BA889 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8072441C703491008BA889 /* ConversationsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		3B2CCA0C1C66BDDB00103276 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		3B2CCA0E1C66C22100103276 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		3B2CCA101C66D19300103276 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		3B8072401C702A2B008BA889 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		3B8072421C70331E008BA889 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		3B8072441C703491008BA889 /* ConversationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,9 @@
 				3B2CC9EC1C66BC3500103276 /* AppDelegate.swift */,
 				3B2CC9EE1C66BC3500103276 /* ViewController.swift */,
 				3B2CC9F01C66BC3500103276 /* Main.storyboard */,
+				3B8072441C703491008BA889 /* ConversationsViewController.swift */,
+				3B8072421C70331E008BA889 /* FeedViewController.swift */,
+				3B8072401C702A2B008BA889 /* TutorialViewController.swift */,
 				3B2CCA101C66D19300103276 /* SignInViewController.swift */,
 				3B2CCA0C1C66BDDB00103276 /* IntroViewController.swift */,
 				3B2CCA0E1C66C22100103276 /* Common.swift */,
@@ -208,8 +217,11 @@
 				3B2CCA0F1C66C22100103276 /* Common.swift in Sources */,
 				3B2CCA0D1C66BDDB00103276 /* IntroViewController.swift in Sources */,
 				3B2CC9EF1C66BC3500103276 /* ViewController.swift in Sources */,
+				3B8072451C703491008BA889 /* ConversationsViewController.swift in Sources */,
 				3B2CCA111C66D19300103276 /* SignInViewController.swift in Sources */,
+				3B8072411C702A2B008BA889 /* TutorialViewController.swift in Sources */,
 				3B2CC9ED1C66BC3500103276 /* AppDelegate.swift in Sources */,
+				3B8072431C70331E008BA889 /* FeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +411,7 @@
 				3B2CCA081C66BC3500103276 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B2CCA091C66BC3500103276 /* Build configuration list for PBXNativeTarget "CarouselishTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +420,7 @@
 				3B2CCA0B1C66BC3500103276 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
