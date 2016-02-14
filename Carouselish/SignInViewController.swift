@@ -13,6 +13,7 @@ class SignInViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var fieldParentView: UIView!
     @IBOutlet weak var buttonParentView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var loginNavBar: UIImageView!
     
     var fieldInitialY: CGFloat!
     var fieldOffset: CGFloat!
@@ -45,7 +46,28 @@ class SignInViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let transform = CGAffineTransformMakeScale(0.2, 0.2)
+        
+        loginNavBar.transform = transform
+        fieldParentView.transform = transform
+        
+        loginNavBar.alpha = 0
+        fieldParentView.alpha = 0
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIView.animateWithDuration(0.3) { () -> Void in
+            self.fieldParentView.transform = CGAffineTransformIdentity
+            self.loginNavBar.transform = CGAffineTransformIdentity
+            self.fieldParentView.alpha = 1
+            self.loginNavBar.alpha = 1
+        }
+    }
     /*
     // MARK: - Navigation
 
@@ -62,6 +84,8 @@ class SignInViewController: UIViewController, UIScrollViewDelegate {
         
         buttonParentView.frame.origin.y = buttonInitialY + buttonOffset
         
+        scrollView.contentOffset.y = scrollView.contentInset.bottom
+        
     }
     
     func keyboardWillHide(notification: NSNotification!) {
@@ -75,5 +99,12 @@ class SignInViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func didTap(sender: AnyObject) {
         view.endEditing(true)
     }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if scrollView.contentOffset.y <= -50 {
+            view.endEditing(true)
+        }
+    }
+    
     
 }
