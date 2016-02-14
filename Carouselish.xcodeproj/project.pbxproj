@@ -21,6 +21,7 @@
 		3B8072451C703491008BA889 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8072441C703491008BA889 /* ConversationsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3B8072471C7035E0008BA889 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8072461C7035E0008BA889 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3B8072491C710C3A008BA889 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8072481C710C3A008BA889 /* CreateViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3B80724B1C711F40008BA889 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B80724A1C711F40008BA889 /* TermsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		3B8072441C703491008BA889 /* ConversationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
 		3B8072461C7035E0008BA889 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3B8072481C710C3A008BA889 /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		3B80724A1C711F40008BA889 /* TermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				3B2CC9EC1C66BC3500103276 /* AppDelegate.swift */,
 				3B2CC9EE1C66BC3500103276 /* ViewController.swift */,
 				3B2CC9F01C66BC3500103276 /* Main.storyboard */,
+				3B80724A1C711F40008BA889 /* TermsViewController.swift */,
 				3B8072481C710C3A008BA889 /* CreateViewController.swift */,
 				3B8072461C7035E0008BA889 /* SettingsViewController.swift */,
 				3B8072441C703491008BA889 /* ConversationsViewController.swift */,
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B80724B1C711F40008BA889 /* TermsViewController.swift in Sources */,
 				3B8072491C710C3A008BA889 /* CreateViewController.swift in Sources */,
 				3B2CCA0F1C66C22100103276 /* Common.swift in Sources */,
 				3B2CCA0D1C66BDDB00103276 /* IntroViewController.swift in Sources */,

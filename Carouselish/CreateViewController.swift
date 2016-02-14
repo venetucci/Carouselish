@@ -13,6 +13,7 @@ class CreateViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var fieldParentView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var buttonParentView: UIView!
+    @IBOutlet weak var checkBoxButton: UIButton!
     
     var fieldInitialY: CGFloat!
     var fieldOffset: CGFloat!
@@ -60,6 +61,15 @@ class CreateViewController: UIViewController, UIScrollViewDelegate {
         
         buttonParentView.frame.origin.y = buttonInitialY
         
+    }
+    
+    @IBAction func createButtonDidPress(sender: AnyObject) {
+        performSegueWithIdentifier("createAccountSegue", sender: self)
+
+    }
+    
+    @IBAction func didPressCheckBox(sender: AnyObject) {
+        checkBoxButton.selected = !checkBoxButton.selected
     }
 
 }
