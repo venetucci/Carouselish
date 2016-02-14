@@ -38,9 +38,7 @@ class SignInViewController: UIViewController, UIScrollViewDelegate {
         fieldOffset = -90
         
         buttonInitialY = buttonParentView.frame.origin.y
-        buttonOffset = -210
         
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -82,11 +80,11 @@ class SignInViewController: UIViewController, UIScrollViewDelegate {
 
     func keyboardWillShow(notification: NSNotification!) {
         
+        buttonOffset = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue().size.height
+        
         fieldParentView.frame.origin.y = fieldInitialY + fieldOffset
         
-        buttonParentView.frame.origin.y = buttonInitialY + buttonOffset
-        
-        scrollView.contentOffset.y = scrollView.contentInset.bottom
+        buttonParentView.frame.origin.y = buttonInitialY - buttonOffset
         
     }
     
@@ -110,31 +108,35 @@ class SignInViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func didPressSignIn(sender: AnyObject) {
         
-        let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .Alert)
+        let emailAlertController = UIAlertController(title: "Email Required", message: "Please enter your email address", preferredStyle: .Alert)
+        let alertController = UIAlertController(title: "Email or Password is incorrect", message: "Please check your email and password", preferredStyle: .Alert)
+        let signInAlertController = UIAlertController(title: "Signing In", message: nil, preferredStyle: .Alert)
         
-        if emailField.text == "m@lyft.com" && passwordField.text == "123" {
-            
-            
-            // Code that runs if both email and password match the text we are looking for in each case
+            if emailField.text == "m@lyft.com" && passwordField.text == "123" {
+               presentViewController(signInAlertController, animated: true) {
+               signInAlertController.dismissViewControllerAnimated(true, completion: { () -> Void in
+                   self.performSegueWithIdentifier("signInSegue", sender: nil)
+               })
+           }
+
+        } else if emailField.text!.isEmpty || passwordField.text!.isEmpty {
+            let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
+            }
+            emailAlertController.addAction(cancelAction)
+            presentViewController(emailAlertController, animated: true) {
+                // optional code for what happens after the alert controller has finished presenting
+            }
         } else {
             let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
-                // handle cancel response here. Doing nothing will dismiss the view.
             }
             alertController.addAction(cancelAction)
-            
-            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-                // handle response here.
+            presentViewController(alertController, animated: true) {
+                // optional code for what happens after the alert controller has finished presenting
             }
-            alertController.addAction(OKAction)
-        }
-        
-        presentViewController(alertController, animated: true) {
-            // optional code for what happens after the alert controller has finished presenting
-        }
-    }
-    
-    
 
+        }
     
+    }
+
     
 }

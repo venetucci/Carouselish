@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Wkk-LL-iVt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="rgo-4V-Y7q">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
@@ -159,6 +159,7 @@
                         <outlet property="loginNavBar" destination="9YS-c1-bgZ" id="ttC-tb-e7T"/>
                         <outlet property="passwordField" destination="gDt-6c-WFC" id="NH5-hE-m4r"/>
                         <outlet property="scrollView" destination="fvB-aE-9FH" id="Evj-1R-G93"/>
+                        <segue destination="EaC-WK-ux3" kind="modal" identifier="signInSegue" id="bEW-qg-P3d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FIS-UY-m00" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -489,6 +490,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="didPressDoneButton:" destination="nsg-fe-bhn" eventType="touchUpInside" id="QWp-qF-OID"/>
+                                </connections>
                             </button>
                             <webView contentMode="scaleToFill" id="XzD-M7-HHR">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
@@ -587,6 +591,7 @@
         <image name="welcome4" width="320" height="568"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wfb-CC-MtQ"/>
+        <segue reference="Hp1-r0-9vH"/>
+        <segue reference="bEW-qg-P3d"/>
     </inferredMetricsTieBreakers>
 </document>
