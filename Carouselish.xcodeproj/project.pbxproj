@@ -24,6 +24,7 @@
 		3B80724B1C711F40008BA889 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B80724A1C711F40008BA889 /* TermsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3B80724D1C7152D4008BA889 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B80724C1C7152D4008BA889 /* GetStartedViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3B80724F1C715753008BA889 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B80724E1C715753008BA889 /* ImageDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3B8072511C71786A008BA889 /* LinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8072501C71786A008BA889 /* LinkViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		3B80724A1C711F40008BA889 /* TermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		3B80724C1C7152D4008BA889 /* GetStartedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
 		3B80724E1C715753008BA889 /* ImageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
+		3B8072501C71786A008BA889 /* LinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		3B2CC9E01C66BC3500103276 = {
 			isa = PBXGroup;
 			children = (
+				3B8072501C71786A008BA889 /* LinkViewController.swift */,
 				3B2CC9EB1C66BC3500103276 /* Carouselish */,
 				3B2CCA001C66BC3500103276 /* CarouselishTests */,
 				3B2CC9EA1C66BC3500103276 /* Products */,
@@ -239,6 +242,7 @@
 				3B8072451C703491008BA889 /* ConversationsViewController.swift in Sources */,
 				3B2CCA111C66D19300103276 /* SignInViewController.swift in Sources */,
 				3B8072411C702A2B008BA889 /* TutorialViewController.swift in Sources */,
+				3B8072511C71786A008BA889 /* LinkViewController.swift in Sources */,
 				3B2CC9ED1C66BC3500103276 /* AppDelegate.swift in Sources */,
 				3B8072431C70331E008BA889 /* FeedViewController.swift in Sources */,
 				3B8072471C7035E0008BA889 /* SettingsViewController.swift in Sources */,

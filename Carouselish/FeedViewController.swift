@@ -8,12 +8,14 @@
 
 import UIKit
 
-class FeedViewController: UIViewController, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning {
+class FeedViewController: UIViewController, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning, UIScrollViewDelegate {
 
     @IBOutlet weak var feedImageView: UIImageView!
-    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var bannerView: UIView!
+    @IBOutlet weak var feedScrollView: UIScrollView!
     @IBOutlet weak var detailImageView: UIImageView!
+    @IBOutlet weak var scrubberScrollView: UIScrollView!
+    @IBOutlet weak var scrubberImageView: UIImageView!
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
     
@@ -24,17 +26,32 @@ class FeedViewController: UIViewController, UIViewControllerTransitioningDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        scrollView.contentSize = feedImageView.image!.size
+        feedScrollView.contentSize = feedImageView.image!.size
         
-        let onboardingCompleted = userDefaults.boolForKey("task1_completed") && userDefaults.boolForKey("task2_completed") && userDefaults.boolForKey("task3_completed")
-        
-        bannerView.hidden = onboardingCompleted
+        scrubberScrollView.delegate = self
+        scrubberScrollView.contentSize = scrubberImageView.image!.size
+
 
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        let onboardingCompleted = userDefaults.boolForKey("task1_completed") && userDefaults.boolForKey("task2_completed") && userDefaults.boolForKey("task3_completed")
+        
+        if onboardingCompleted == true {
+            UIView.animateWithDuration(0.2) { () -> Void in
+               self.bannerView.alpha = 0
+            }
+        }
     }
     
 
@@ -86,12 +103,6 @@ class FeedViewController: UIViewController, UIViewControllerTransitioningDelegat
             }
         }
     }
-    
-    
-    
-    
-    
-    
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "detailSegue" {
@@ -106,4 +117,22 @@ class FeedViewController: UIViewController, UIViewControllerTransitioningDelegat
         print("testing_this")
         self.performSegueWithIdentifier("detailSegue", sender: nil)
     }
+    @IBAction func bannerDismissDidTap(sender: AnyObject) {
+        bannerView.hidden = true
+    }
+    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+         userDefaults.setBool(true, forKey: "task2_completed")
+         userDefaults.synchronize()
+        print("scrubber")
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let scrubberWidth = scrubberScrollView.contentSize.width - CGRectGetWidth(scrubberScrollView.bounds)
+        let percentageScroll = scrubberScrollView.contentOffset.x / scrubberWidth
+        let feedViewHeight = feedScrollView.contentSize.height - CGRectGetHeight(feedScrollView.bounds)
+        feedScrollView.contentOffset = CGPoint(x: 0, y: feedViewHeight * percentageScroll)
+    }
+    
+    
 }

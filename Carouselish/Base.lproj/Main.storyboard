@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8gc-1D-fJc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="rgo-4V-Y7q">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
@@ -286,6 +286,9 @@
                                         <state key="normal" title="x">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="bannerDismissDidTap:" destination="CBU-pE-n4M" eventType="touchUpInside" id="7TT-yn-Taf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1pa-3p-EeV">
                                         <rect key="frame" x="0.0" y="0.5" width="284" height="43.5"/>
@@ -301,10 +304,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="scrubber" id="uUc-WL-Hqv">
-                                <rect key="frame" x="0.0" y="532" width="320" height="36"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="E51-gm-gqV">
+                                <rect key="frame" x="0.0" y="532" width="307" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="scrubber" id="uUc-WL-Hqv">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="36"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="S3q-5h-aOY">
                                 <rect key="frame" x="3" y="16" width="46" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -329,8 +338,10 @@
                         <outlet property="bannerView" destination="ZcF-Cw-ENu" id="D19-tF-Uhz"/>
                         <outlet property="detailImageView" destination="qHa-tU-uA7" id="TBR-ui-1Jg"/>
                         <outlet property="feedImageView" destination="Q2g-Ng-nn1" id="4Rt-Za-ona"/>
-                        <outlet property="scrollView" destination="tLZ-8j-4jj" id="CzM-BQ-UMA"/>
-                        <segue destination="R2I-Y0-zRx" kind="modal" identifier="detailSegue" animates="NO" id="IfB-iB-AK3"/>
+                        <outlet property="feedScrollView" destination="tLZ-8j-4jj" id="Tp3-Ly-VFg"/>
+                        <outlet property="scrubberImageView" destination="uUc-WL-Hqv" id="hqZ-Ml-284"/>
+                        <outlet property="scrubberScrollView" destination="E51-gm-gqV" id="exT-ZU-UH5"/>
+                        <segue destination="R2I-Y0-zRx" kind="modal" identifier="detailSegue" modalTransitionStyle="coverVertical" id="IfB-iB-AK3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWi-yH-lzg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -689,18 +700,103 @@
                                         <rect key="frame" x="0.0" y="-1" width="320" height="567"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
+                                    <view contentMode="scaleToFill" id="QYy-29-nIa">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0EV-2v-zfw">
+                                                <rect key="frame" x="274" y="26" width="37" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Done"/>
+                                                <connections>
+                                                    <action selector="doneButtonDidPress:" destination="R2I-Y0-zRx" eventType="touchUpInside" id="eAC-ur-Dym"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                             </scrollView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="share_bar-1" id="4qg-AN-vw3">
+                                <rect key="frame" x="0.0" y="533" width="320" height="37"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Gt-JD-eGb">
+                                <rect key="frame" x="5" y="536" width="58" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="shareButtonDidTap:" destination="R2I-Y0-zRx" eventType="touchUpInside" id="2C2-UL-ta1"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" id="A26-ma-7eJ">
+                                <rect key="frame" x="0.0" y="570" width="320" height="351"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="share_sheet-1" id="muh-p8-vXq">
+                                        <rect key="frame" x="0.0" y="-1" width="320" height="351"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RcN-zk-B4V">
+                                        <rect key="frame" x="126" y="23" width="64" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="linkButtonDidTap:" destination="R2I-Y0-zRx" eventType="touchUpInside" id="C6Y-kY-wMH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="uNl-nE-tnE" id="Kbd-rB-znD"/>
+                        <outlet property="shareSheetView" destination="A26-ma-7eJ" id="fns-Am-zoc"/>
+                        <segue destination="YcT-Os-FP4" kind="modal" identifier="linkSegue" id="MQT-YH-bPo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9E3-mM-mgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3712" y="-687"/>
+        </scene>
+        <!--Link View Controller-->
+        <scene sceneID="fV2-wB-hqM">
+            <objects>
+                <viewController id="YcT-Os-FP4" customClass="LinkViewController" customModule="Carouselish" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IHP-w0-Pan">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="copy_link-1" id="e7M-hX-aQg">
+                                <rect key="frame" x="0.0" y="-1" width="320" height="569"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FOH-Kf-RJ8">
+                                <rect key="frame" x="54" y="316" width="213" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="didPressCopyButton:" destination="YcT-Os-FP4" eventType="touchUpInside" id="E92-uP-OCB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eei-Dn-Vg8">
+                                <rect key="frame" x="0.0" y="15" width="50" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="doneButtonDidPress:" destination="YcT-Os-FP4" eventType="touchUpInside" id="CyI-Sc-5qn"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" id="hMV-SW-YNw">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DTl-8G-woG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4088" y="-687"/>
         </scene>
     </scenes>
     <resources>
@@ -711,6 +807,7 @@
         <image name="checkbox_complete" width="24" height="24"/>
         <image name="checkbox_unchecked" width="23" height="23"/>
         <image name="conversations" width="320" height="568"/>
+        <image name="copy_link-1" width="320" height="569"/>
         <image name="create_button" width="320" height="57"/>
         <image name="create_form" width="320" height="192"/>
         <image name="create_nav" width="320" height="66"/>
@@ -731,6 +828,8 @@
         <image name="scrubber" width="320" height="36"/>
         <image name="settings" width="320" height="695"/>
         <image name="settings_nav" width="320" height="64"/>
+        <image name="share_bar-1" width="320" height="37"/>
+        <image name="share_sheet-1" width="320" height="351"/>
         <image name="sign_in_buttons" width="320" height="104"/>
         <image name="sign_in_nav_bar" width="320" height="66"/>
         <image name="terms_text" width="320" height="33"/>

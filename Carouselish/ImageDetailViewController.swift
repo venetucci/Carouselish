@@ -11,6 +11,10 @@ import UIKit
 class ImageDetailViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var shareSheetView: UIView!
+    
+    var initialY: CGFloat!
+    var offset: CGFloat!
     
     var image: UIImage!
     let userDefaults = NSUserDefaults.standardUserDefaults()
@@ -24,6 +28,9 @@ class ImageDetailViewController: UIViewController {
         
         imageView.image = image
         
+        initialY = shareSheetView.frame.origin.y
+        offset = -351
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,6 +39,9 @@ class ImageDetailViewController: UIViewController {
     }
     
 
+    @IBAction func doneButtonDidPress(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 
@@ -42,4 +52,15 @@ class ImageDetailViewController: UIViewController {
     }
     */
 
+    @IBAction func linkButtonDidTap(sender: AnyObject) {
+        performSegueWithIdentifier("linkSegue", sender: nil)
+        self.shareSheetView.frame.origin.y = self.initialY 
+    }
+    
+    @IBAction func shareButtonDidTap(sender: AnyObject) {
+       
+        UIView.animateWithDuration(0.2) { () -> Void in
+            self.shareSheetView.frame.origin.y = self.initialY + self.offset
+        }
+    }
 }
