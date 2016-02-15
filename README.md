@@ -3,7 +3,7 @@ Carousel prototype in Swift
 
 Submitted by: Michelle Venetucci Harvey
 
-Time spent: 8 hours spent in total
+Time spent: 12 hours spent in total
 
 ## User Stories
 
@@ -14,8 +14,8 @@ The following **required** and **optional** functionality is complete:
     * [x] Tapping on email/password reveals the keyboard and shifts the scrollview and Sign In button up.
     * [x] Upon tapping the Sign In button.
        * [x] If the username or password fields are empty, user sees an error alert.
-       * [ ] If credentials are incorrect, user sees a loading indicator for 2 seconds followed by an error alert.
-       * [ ] If the credentials are correct, user sees a loading indicator for 2 seconds followed by a transition to the Sign In screens.
+       * [x] If credentials are incorrect, user sees a loading indicator for 2 seconds followed by an error alert.
+       * [x] If the credentials are correct, user sees a loading indicator for 2 seconds followed by a transition to the Sign In screens.
     * [x] Optional: When the keyboard is visible, if the user pulls down on the scrollview, it will dismiss the keyboard.
     * [x] Optional: On appear, scale the form up and fade it in.
 * [x] Optional: Create a Dropbox
@@ -36,22 +36,27 @@ The following **required** and **optional** functionality is complete:
 * [x] Settings
     * [x] User can dismiss the settings screen.
     * [x] User can log out
-* [ ] Optional: Learn more about Carousel
-    * [ ] Optional: Show the "Learn more about Carousel" button in the photo timeline.
-    * [ ] Optional: Tap the X to dismiss the banner
-    * [ ] Optional: Track the 3 events:
-       * [ ] View a photo full screen
-       * [ ] Swipe left and right
-       * [ ] Share a photo
-    * [ ] Optional: Upon completion of the events, mark them green.
-    * [ ] Optional: When all events are completed, dismiss the banner.
+* [x] Optional: Learn more about Carousel
+    * [x] Optional: Show the "Learn more about Carousel" button in the photo timeline.
+    * [x] Optional: Tap the X to dismiss the banner
+    * [x] Optional: Track the 3 events:
+       * [x] View a photo full screen
+       * [x] Swipe left and right on timeline
+       * [x] Feed scroll view moves when timeline scroll is dragging
+       * [x] Share a photo / copy link
+    * [x] Optional: Upon completion of the events, mark them green.
+    * [x] Optional: When all events are completed, dismiss the banner.
 
 
 ## Video Walkthrough 
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of the "Learn more about Carousel" optionals:
 
-![Video Walkthrough](Dropboxish_walkthrough/dropboxish_walkthrough.gif)
+![Video Walkthrough](/Carouselish_walkthrough/Carousel_walkthrough_optional_onboarding.gif)
+
+Here's a walkthrough of all implemented user stories:
+
+![Video Walkthrough](/Carouselish_walkthrough/Carousel_walkthrough.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
